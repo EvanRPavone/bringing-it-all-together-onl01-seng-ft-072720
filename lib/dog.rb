@@ -28,7 +28,7 @@ class Dog
   end
 
   def self.drop_table
-    sql = <<-SQL 
+    sql = <<-SQL
      DROP TABLE dogs
     SQL
     DB[:conn].execute(sql)
@@ -37,7 +37,7 @@ class Dog
   def save
     if self.id
       self.update
-    else  
+    else
     sql = <<-SQL
     INSERT INTO dogs
     (name, breed) VALUES (?, ?)
